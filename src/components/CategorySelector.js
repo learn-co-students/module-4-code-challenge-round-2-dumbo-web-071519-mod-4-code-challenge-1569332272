@@ -3,11 +3,12 @@ import CategoryField from './CategoryField'
 import categories from '../categories'
 
 const CategorySelector = (props) => {
-
+console.log(props)
   const categoryFields = categories.map((category, i) => <CategoryField
       key={ i }
-      checked={ category === props.activeCategory }
+      checked={ category === props.sortTerm }
       category={ category }
+      onChange={ props.handleRadio }
     />)
 
   return (
